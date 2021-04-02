@@ -1,24 +1,57 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Switch, Route
+} from "react-router-dom";
+import Home from './components/Home/Home';
+import NotFound from './components/Notfound/NotFound';
+import Admin from './components/Admin/Admin';
+import {  createContext, useState } from 'react';
+import Login from './components/Login/Login';
+import Checkout from './components/Checkout/Checkout';
+import route from './components/PrivateRoute/PrivateRoute';
+import OrderDetail from './components/OrderDetail/OrderDetail';
+import AddProduct from './components/AddProduct/AddProduct';
+import ManageProduct from './components/ManageProduct/ManageProduct';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+
+export const UserContext = createContext()
 
 function App() {
+  
+  const [userData,setUserData] = useState({})
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <UserContext.Provider value={[userData,setUserData]}>
+      <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
+        <Route  path="/home">
+          <Home></Home>
+        </Route>
+        <PrivateRoute  path="/admin">
+          <Admin></Admin>
+        </PrivateRoute>
+        <PrivateRoute path="/orders">
+          <OrderDetail></OrderDetail>
+        </PrivateRoute>
+       <Route path="/login">
+          <Login></Login>
+       </Route>
+       <PrivateRoute path="/addProduct">
+          <AddProduct></AddProduct>
+       </PrivateRoute>
+       <PrivateRoute path="/manageProduct">
+         <ManageProduct></ManageProduct>
+       </PrivateRoute>
+       <PrivateRoute path="/checkout/:id">
+         <Checkout></Checkout>
+       </PrivateRoute>
+        <Route path="*">
+          <NotFound></NotFound>
+        </Route>
+      </Switch>
+    </Router>
+   </UserContext.Provider>
   );
 }
 

@@ -1,0 +1,30 @@
+
+
+.formContainer form{
+    width: 80%;
+    margin:0 auto;
+    background-color: rgb(234, 252, 255);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+}
+.formContainer form input{
+    width: 80%;
+    margin-bottom: 20px;
+    border:1px solid lightgray;
+    padding:5px;
+    border-radius: 5px;
+    outline: none;
+}
+.formContainer form p{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.formContainer form .inputImageUpload{
+    border:none
+}
+.submitBtn{
+    width: 100px;
+    display: inline-block;
+}

@@ -1,0 +1,16 @@
+.orderItem{
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    grid-template-columns: repeat(6,1fr);
+    background-color: #0147FE;
+    padding: 10px;
+    margin-bottom: 10px;
+    color:#fff;
+    border-radius: 10px;
+}
+img{
+    width: 80px;
+    border-radius: 50%;
+    margin-right:50px
+}
