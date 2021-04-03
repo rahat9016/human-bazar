@@ -140,8 +140,6 @@ import { UserContext } from '../../App';
 
         <input type = 'email' name = "email"onBlur = { handleChange}placeholder = "User Or Email"required ref= {register({required: true})}/> 
 
-        
-
         <input type = "password" name = "password" onBlur = {handleChange}placeholder = "Password"required ref = {register({required: true})}/> 
         
         {newUser && <input type = "password" name="confirmPassword" placeholder = "Confirm Password"ref ={register({required: true})}/>}
