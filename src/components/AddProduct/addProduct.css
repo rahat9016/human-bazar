@@ -1,6 +1,8 @@
-.formContainer form{
+.formContainer {
     width: 80%;
     margin:0 auto;
+}
+.formContainer form{
     background-color: rgb(234, 252, 255);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -22,7 +24,37 @@
 .formContainer form .inputImageUpload{
     border:none
 }
-.submitBtn{
-    width: 100px;
-    display: inline-block;
+@media only screen and (max-width: 599px) {
+    .formContainer {
+        width: 100%;
+    }
+    .formContainer form{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .formContainer {
+        width: 100%;
+    }
+    .formContainer form{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .formContainer {
+        width: 80%;
+    }
+    .formContainer form{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (min-width: 992px) {
+    .formContainer {
+        width: 80%;
+    }
+    .formContainer form{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

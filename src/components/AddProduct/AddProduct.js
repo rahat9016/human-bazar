@@ -43,9 +43,9 @@ const AddProduct = () => {
     }
 
     return (
-        <div >
+        <div className="formContainer">
             <ProductHeader></ProductHeader>
-            <div className="formContainer">
+            <div>
             <form className="fromAddProduct"  onSubmit={handleSubmit(onSubmit)}>
                 <div>
                     <p>Product Name</p>
