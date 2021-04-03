@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../App';
 import './header.css'
 const Header = () => {
+    const [userData,setUserData] = useContext(UserContext)
+    console.log(userData)
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light header">
@@ -13,12 +16,15 @@ const Header = () => {
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
+                <div className="navbar-nav navItem">
                     <Link to="/home" className="link fs-4">Home</Link>
                     <Link to="/orders" className="link fs-4">Orders</Link>
                     <Link to="/admin"  className="link fs-4">Admin</Link>
                     <Link to="/deals"  className="link fs-4">Deals</Link>
-                    <Link to="/login"  className="link fs-4">Login</Link>
+                    {userData.email ? <small>{userData.displayName} </small> :
+                    <Link to="/login" className="link fs-4">
+                        Login
+                    </Link>}
                 </div>
                 </div>
             </div>

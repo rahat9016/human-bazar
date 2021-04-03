@@ -6,3 +6,7 @@
     align-items: flex-end;
 
 }
+.navItem{
+    display: flex;
+    align-items: center;
+}
