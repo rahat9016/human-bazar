@@ -1,12 +1,11 @@
 import React from 'react';
-
 import './orderItems.css'
+
 const OrderItems = ({order}) => {
-    console.log(order)
     const {imageUrl,email,userName, name,orderTime,wigth,price} = order
     const sliceItem = order._id.slice(2,6)
     return (
-        <div className="container" >
+        <div>
             <div className="orderItem">
                 <h3>Id: {sliceItem}</h3>
                 <img src={imageUrl} alt=""/>

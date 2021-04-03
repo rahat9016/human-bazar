@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './header.css'
-import logo from '../icons/logo.png'
 const Header = () => {
     return (
         <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light header">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light header">
                 <div className="logo">
                     <Link to="/home" className="fs-2 text-decoration-none" >Human bazar</Link>
                 </div>

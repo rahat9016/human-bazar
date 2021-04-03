@@ -14,3 +14,25 @@
     font-weight: bold;
     font-size: 20px;
 }
+/* @media only screen and (max-width: 600px) {
+    .productHeaderContainer{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .productHeaderContainer{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .productHeaderContainer{
+        width: 80%;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .productHeaderContainer{
+        width: 80%;
+    }
+} */

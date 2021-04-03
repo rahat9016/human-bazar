@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AddProduct from '../AddProduct/AddProduct';
 import './ProductHeader.css'
 
 const ProductHeader = () => {

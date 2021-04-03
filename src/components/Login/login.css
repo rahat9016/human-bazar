@@ -1,7 +1,6 @@
 .login-box{
     margin: 0 auto;
     width: 40%;
-    
     margin-top: 20px;
    
 }
@@ -56,4 +55,29 @@
     margin-top: 20px;
     margin-bottom: 10px;
     color:#fff
+}
+
+@media only screen and (max-width: 600px) {
+    .login-box{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .login-box{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .login-box{
+        width: 80%;
+       
+    }
+}
+@media only screen and (min-width: 992px) {
+    .login-box{
+        width: 40%;
+       
+    }
 }

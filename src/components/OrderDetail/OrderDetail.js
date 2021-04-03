@@ -14,7 +14,7 @@ const OrderDetail = () => {
     },[])
     
     return (
-        <div className="container">
+        <div className="orderDetailContainer">
             <div style={{marginBottom:'20px'}}>
                 <Header></Header>
             </div>
@@ -27,7 +27,12 @@ const OrderDetail = () => {
                 <h3>Order Time</h3>
             </div>
             {
-                orders.map(order => <OrderItems order={order}></OrderItems>)
+                    orders.length === 0 &&<div style={{position:'absolute',top:'50%',left:'50%',transform:'translate("-50%,-50%")'}} className="spinner-border text-danger" role="status">
+                <span class="visually-hidden">Loading...</span></div>
+                
+                }
+            {
+                orders.map(order => <OrderItems order={order} key={order._key}></OrderItems>)
             }
             <Link to="/home" className="backBtn">Back to Home</Link>
         </div>

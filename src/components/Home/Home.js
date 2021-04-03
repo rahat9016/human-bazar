@@ -15,6 +15,11 @@ const Home = () => {
             <Header></Header>
             
             <div className="productContainer">
+                {
+                    products.length === 0 &&<div style={{position:'absolute',top:'50%',left:'50%',transform:'translate("-50%,-50%")'}} className="spinner-border text-danger" role="status">
+                <span class="visually-hidden">Loading...</span></div>
+                
+                }
             {
                 products.map(product => <Product product={product} key={product._id}></Product>)
             }

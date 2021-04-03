@@ -14,3 +14,28 @@ img{
     border-radius: 50%;
     margin-right:50px
 }
+
+
+@media only screen and (max-width: 600px) {
+    .orderItem {
+        padding: 10px 5px;
+    }
+    .orderItem h3{
+        font-size: 16px;
+    }
+    img{
+        width: 50px;
+        margin-right:30px
+    }
+}
+
+@media only screen and (min-width: 600px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+@media only screen and (min-width: 992px) {
+   
+}
