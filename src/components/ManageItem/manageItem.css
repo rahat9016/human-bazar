@@ -41,12 +41,39 @@
 }
 
 @media only screen and (min-width: 600px) {
-   
+    .manageName{
+        font-size: 18px;
+    }
+    .manageWigth{
+        font-size: 18px;
+    }
+    .managePrice{
+        font-size: 18px;
+    }
+    .manageDelete{
+        width: 30px;
+    }
+    .manageEdit{
+        width: 30px;
+    }
 }
 
 @media only screen and (min-width: 768px) {
-   
-}
-@media only screen and (min-width: 992px) {
-
+    .manageName{
+        width: 50%;
+    }
+    .manageWigth{
+        width: 20%;
+    }
+    .managePrice{
+        width: 20%;
+    }
+    .manageDelete{
+        width: 50px;
+        cursor: pointer;
+    }
+    .manageEdit{
+        width: 50px;
+        cursor: pointer;
+    }
 }
