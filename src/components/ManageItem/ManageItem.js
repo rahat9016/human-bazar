@@ -10,7 +10,6 @@ const ManageItem = ({product}) => {
             method:'DELETE'
         })
         .then(res => res.json())
-        .then(result => console.log('delete Success',result))
     }
     return (
        <div>

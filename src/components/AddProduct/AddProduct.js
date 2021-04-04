@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
-import { Link } from 'react-router-dom';
 import ProductHeader from '../ProductHeader/ProductHeader';
 import './addProduct.css'
 const AddProduct = () => {
@@ -63,7 +62,7 @@ const AddProduct = () => {
                     <p>Add Photo</p>
                     <input className="inputImageUpload" type="file" accept="image/*,.pdf" onChange={handleImageUpload}required/>
                 </div>
-                <button className="submitBtn" type="submit">submit</button>
+                <button className="submitBtn">submit</button>
             </form>
             </div>
             

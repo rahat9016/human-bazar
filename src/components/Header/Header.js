@@ -2,8 +2,9 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../App';
 import './header.css'
+import DisplayIMG from  '../icons/Avatarface.png'
 const Header = () => {
-    const [userData,setUserData] = useContext(UserContext)
+    const [userData] = useContext(UserContext)
     console.log(userData)
     return (
         <div>
@@ -21,7 +22,7 @@ const Header = () => {
                     <Link to="/orders" className="link fs-4">Orders</Link>
                     <Link to="/admin"  className="link fs-4">Admin</Link>
                     <Link to="/deals"  className="link fs-4">Deals</Link>
-                    {userData.email ? <small>{userData.displayName} </small> :
+                    {userData.email ? <img src={DisplayIMG} style={{width:"50px"}} alt=""/>:
                     <Link to="/login" className="link fs-4">
                         Login
                     </Link>}

@@ -4,7 +4,7 @@ import './checkout.css'
 import Header from '../Header/Header';
 import { UserContext } from '../../App';
 const Checkout = () => {
-    const [loggedInUser,setLoggedInuser] = useContext(UserContext)
+    const [loggedInUser] = useContext(UserContext)
     const {id} = useParams()
     const [product,setProduct] = useState({})
     useEffect(()=>{
@@ -32,7 +32,6 @@ const Checkout = () => {
     return (
         <div className="checkoutContainer">
             <Header></Header>
-            
         <div className="mainCheckBox">
             <h1>Checkout</h1>
             <div className="container checkoutBox">

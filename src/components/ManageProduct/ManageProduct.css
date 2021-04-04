@@ -1,5 +1,8 @@
-.manageDetail{
+.manageContainer{
     width: 80%;
+    margin: auto
+}
+.manageDetail{
     margin:20px auto;
     display: flex;
     background-color: #f7f9ff;
@@ -7,4 +10,20 @@
     margin-bottom: 10px;
     color:rgb(5, 5, 5);
     border-radius: 10px;
+}
+@media only screen and (max-width: 599px) {
+    .manageContainer{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+   
+}
+
+@media only screen and (min-width: 768px) {
+   
+}
+@media only screen and (min-width: 992px) {
+
 }

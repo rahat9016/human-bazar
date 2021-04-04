@@ -11,7 +11,7 @@ const ManageProduct = () => {
     },[])
     return (
         
-        <div>
+        <div className="manageContainer">
             <ProductHeader></ProductHeader>
                <div className="manageDetail">
                     <h3 className="manageName">Name</h3>
